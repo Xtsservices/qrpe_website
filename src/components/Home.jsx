@@ -115,7 +115,7 @@ const Home = ({ scrollToSection }) => {
   }, [features.length, backgroundSlides.length]);
 
   return (
-    <section id="home" className="relative pt-16 min-h-screen overflow-hidden">
+    <section id="home" className="relative pt-0 min-h-screen overflow-hidden">
       <div className="absolute inset-0 overflow-hidden">
         {backgroundSlides.map((slide, index) => (
           <div
