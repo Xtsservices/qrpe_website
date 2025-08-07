@@ -69,7 +69,7 @@ const About = () => {
       ([entry]) => {
         setIsInView(entry.isIntersecting);
       },
-      { threshold: 0.2 }
+      { threshold: 0.1 }
     );
 
     if (sectionRef.current) {
@@ -93,7 +93,7 @@ const About = () => {
     <section 
       ref={sectionRef}
       id="about" 
-      className="relative py-24 bg-gradient-to-br from-blue-50 via-white to-blue-100 overflow-hidden"
+      className="relative py-16 md:py-24 bg-gradient-to-br from-blue-50 via-white to-blue-100 overflow-hidden"
     >
       <div className="absolute inset-0">
         <div 
@@ -110,18 +110,18 @@ const About = () => {
           />
         </div>
 
-        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-blue-200/20 to-blue-200/20 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }} />
-        <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-br from-blue-200/20 to-blue-200/20 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s', animationDelay: '2s' }} />
+        <div className="absolute top-0 left-0 w-64 h-64 md:w-96 md:h-96 bg-gradient-to-br from-blue-200/20 to-blue-200/20 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }} />
+        <div className="absolute bottom-0 right-0 w-56 h-56 md:w-80 md:h-80 bg-gradient-to-br from-blue-200/20 to-blue-200/20 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s', animationDelay: '2s' }} />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className={`text-center mb-20 transition-all duration-1200 ease-out ${isLoaded && isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+        <div className={`text-center mb-12 md:mb-20 transition-all duration-1200 ease-out ${isLoaded && isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600/10 to-blue-800/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6 border border-blue-200/30">
             <Sparkles className="w-4 h-4 text-blue-600 animate-pulse" />
             <span className="text-sm font-medium text-blue-800">Leading Technology Partner</span>
           </div>
           
-          <h2 className="text-4xl md:text-6xl font-light text-blue-900 mb-6 tracking-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-6xl font-light text-blue-900 mb-6 tracking-tight">
             About{' '}
             <span className="relative inline-block">
               <span className="font-semibold bg-gradient-to-r from-blue-900 via-blue-700 to-blue-600 bg-clip-text text-transparent animate-pulse">
@@ -131,7 +131,7 @@ const About = () => {
             </span>
           </h2>
           
-          <p className="text-xl md:text-2xl text-blue-700 max-w-4xl mx-auto leading-relaxed font-light">
+          <p className="text-lg md:text-xl lg:text-2xl text-blue-700 max-w-4xl mx-auto leading-relaxed font-light">
             QRpe is an Indian Brand, your gateway to seamless digital interactions and effortless transactions.
           </p>
           
@@ -142,42 +142,42 @@ const About = () => {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-start mb-20">
+        <div className="grid lg:grid-cols-2 gap-12 md:gap-16 items-start mb-16 md:mb-20">
           <div className={`transition-all duration-1200 delay-300 ${isLoaded && isInView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>
-            <div className="sticky top-8">
+            <div className="lg:sticky lg:top-8">
               <div className="relative mb-8">
                 <div className="flex items-center mb-6">
                   <div className="w-2 h-12 bg-gradient-to-b from-blue-600 via-blue-500 to-blue-800 rounded-full mr-4 animate-pulse" />
-                  <h3 className="text-3xl font-bold text-blue-900 bg-gradient-to-r from-blue-900 to-blue-700 bg-clip-text">
+                  <h3 className="text-2xl md:text-3xl font-bold text-blue-900 bg-gradient-to-r from-blue-900 to-blue-700 bg-clip-text">
                     Who We Are
                   </h3>
                 </div>
                 
-                <div className="space-y-6 text-blue-700 leading-relaxed">
-                  <p className="text-lg">
+                <div className="space-y-4 md:space-y-6 text-blue-700 leading-relaxed">
+                  <p className="text-base md:text-lg">
                     Step into a world of convenience and innovation with QRpe – where every scan opens doors to endless possibilities.
                   </p>
-                  <p className="text-lg">
+                  <p className="text-base md:text-lg">
                     Join us as we redefine connectivity and accessibility at QRpe – your trusted companion in the digital realm.
                   </p>
-                  <p className="text-lg">
+                  <p className="text-base md:text-lg">
                     Embark on a journey of simplicity and efficiency with QRpe – where every welcome is met with unparalleled ease.
                   </p>
                 </div>
               </div>
               
-              <div className="space-y-4">
+              <div className="space-y-3 md:space-y-4">
                 {certifications.map((item, index) => (
                   <div 
                     key={index} 
-                    className={`group flex items-center p-4 bg-white/60 backdrop-blur-sm rounded-xl border border-blue-200/50 hover:border-blue-300/50 hover:bg-white/80 transition-all duration-500 hover:shadow-lg hover:shadow-blue-100/50 ${isLoaded && isInView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}
+                    className={`group flex items-center p-3 md:p-4 bg-white/60 backdrop-blur-sm rounded-xl border border-blue-200/50 hover:border-blue-300/50 hover:bg-white/80 transition-all duration-500 hover:shadow-lg hover:shadow-blue-100/50 ${isLoaded && isInView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}
                     style={{ transitionDelay: `${600 + index * 150}ms` }}
                   >
-                    <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl mr-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
-                      <CheckCircle className="w-5 h-5 text-white" />
+                    <div className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl mr-3 md:mr-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
+                      <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-white" />
                     </div>
                     <div className="flex-1">
-                      <span className="text-blue-800 font-medium group-hover:text-blue-900 transition-colors duration-300">
+                      <span className="text-sm md:text-base text-blue-800 font-medium group-hover:text-blue-900 transition-colors duration-300">
                         {item.text}
                       </span>
                     </div>
@@ -191,40 +191,40 @@ const About = () => {
           </div>
 
           <div className={`transition-all duration-1200 delay-500 ${isLoaded && isInView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
-            <div className="space-y-8">
-              <div className="group relative bg-gradient-to-br from-white to-blue-50/50 p-8 rounded-3xl border border-blue-200/50 hover:border-blue-300/50 transition-all duration-700 hover:shadow-2xl hover:shadow-blue-100/30 transform hover:-translate-y-2">
+            <div className="space-y-6 md:space-y-8">
+              <div className="group relative bg-gradient-to-br from-white to-blue-50/50 p-6 md:p-8 rounded-3xl border border-blue-200/50 hover:border-blue-300/50 transition-all duration-700 hover:shadow-2xl hover:shadow-blue-100/30 transform hover:-translate-y-2">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 via-blue-600/5 to-blue-800/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-3xl" />
                 
                 <div className="relative z-10">
-                  <div className="flex items-center mb-6">
-                    <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl mr-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-xl">
-                      <Target className="w-8 h-8 text-white" />
+                  <div className="flex items-center mb-4 md:mb-6">
+                    <div className="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl mr-4 md:mr-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-xl">
+                      <Target className="w-6 h-6 md:w-8 md:h-8 text-white" />
                     </div>
                     <div>
-                      <h4 className="text-2xl font-bold text-blue-900 group-hover:text-blue-700 transition-colors duration-300">Our Mission</h4>
+                      <h4 className="text-xl md:text-2xl font-bold text-blue-900 group-hover:text-blue-700 transition-colors duration-300">Our Mission</h4>
                       <div className="w-12 h-1 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full mt-1 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
                     </div>
                   </div>
-                  <p className="text-blue-700 text-lg leading-relaxed group-hover:text-blue-800 transition-colors duration-300">
+                  <p className="text-blue-700 text-base md:text-lg leading-relaxed group-hover:text-blue-800 transition-colors duration-300">
                     To simplify digital interactions and transactions for businesses, enabling them to focus on <span className="text-blue-700 font-semibold">growth</span> while we handle the <span className="text-blue-800 font-semibold">technology</span>.
                   </p>
                 </div>
               </div>
               
-              <div className="group relative bg-gradient-to-br from-white to-blue-50/50 p-8 rounded-3xl border border-blue-200/50 hover:border-blue-300/50 transition-all duration-700 hover:shadow-2xl hover:shadow-blue-100/30 transform hover:-translate-y-2">
+              <div className="group relative bg-gradient-to-br from-white to-blue-50/50 p-6 md:p-8 rounded-3xl border border-blue-200/50 hover:border-blue-300/50 transition-all duration-700 hover:shadow-2xl hover:shadow-blue-100/30 transform hover:-translate-y-2">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-800/5 via-blue-600/5 to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-3xl" />
                 
                 <div className="relative z-10">
-                  <div className="flex items-center mb-6">
-                    <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-800 to-blue-900 rounded-2xl mr-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-xl">
-                      <Eye className="w-8 h-8 text-white" />
+                  <div className="flex items-center mb-4 md:mb-6">
+                    <div className="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-blue-800 to-blue-900 rounded-2xl mr-4 md:mr-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-xl">
+                      <Eye className="w-6 h-6 md:w-8 md:h-8 text-white" />
                     </div>
                     <div>
-                      <h4 className="text-2xl font-bold text-blue-900 group-hover:text-blue-800 transition-colors duration-300">Our Vision</h4>
+                      <h4 className="text-xl md:text-2xl font-bold text-blue-900 group-hover:text-blue-800 transition-colors duration-300">Our Vision</h4>
                       <div className="w-12 h-1 bg-gradient-to-r from-blue-800 to-blue-600 rounded-full mt-1 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
                     </div>
                   </div>
-                  <p className="text-blue-700 text-lg leading-relaxed group-hover:text-blue-800 transition-colors duration-300">
+                  <p className="text-blue-700 text-base md:text-lg leading-relaxed group-hover:text-blue-800 transition-colors duration-300">
                     To be the most <span className="text-blue-800 font-semibold">trusted Technology Service Partner</span> in digital innovation, setting new standards for connectivity and accessibility.
                   </p>
                 </div>
@@ -233,14 +233,14 @@ const About = () => {
           </div>
         </div>
 
-        <div className={`grid md:grid-cols-3 gap-8 mb-20 transition-all duration-1200 delay-700 ${isLoaded && isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+        <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-16 md:mb-20 transition-all duration-1200 delay-700 ${isLoaded && isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
           {achievements.map((achievement, index) => (
             <div
               key={index}
               className={`group relative transition-all duration-700 ${isLoaded && isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
               style={{ transitionDelay: `${900 + index * 200}ms` }}
             >
-              <div className={`relative bg-gradient-to-br ${achievement.bgColor} p-8 rounded-3xl border border-blue-200/50 hover:border-blue-300/50 transition-all duration-700 text-center group-hover:shadow-2xl transform group-hover:-translate-y-3 group-hover:scale-105 overflow-hidden`}>
+              <div className={`relative bg-gradient-to-br ${achievement.bgColor} p-6 md:p-8 rounded-3xl border border-blue-200/50 hover:border-blue-300/50 transition-all duration-700 text-center group-hover:shadow-2xl transform group-hover:-translate-y-3 group-hover:scale-[1.03] overflow-hidden`}>
                 <div className={`absolute inset-0 bg-gradient-to-br ${achievement.color} opacity-0 group-hover:opacity-[0.08] transition-all duration-700`} />
                 
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
@@ -259,34 +259,34 @@ const About = () => {
                 </div>
                 
                 <div className="relative z-10">
-                  <div className={`flex items-center justify-center w-20 h-20 bg-gradient-to-br ${achievement.color} rounded-2xl mx-auto mb-6 shadow-xl transform group-hover:scale-125 group-hover:rotate-12 transition-all duration-500`}>
+                  <div className={`flex items-center justify-center w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br ${achievement.color} rounded-2xl mx-auto mb-4 md:mb-6 shadow-xl transform group-hover:scale-125 group-hover:rotate-12 transition-all duration-500`}>
                     <div className="text-white transform group-hover:scale-110 transition-transform duration-300">
                       {achievement.icon}
                     </div>
                   </div>
                   
-                  <div className="space-y-2 mb-4">
-                    <div className="text-3xl md:text-4xl font-bold text-blue-900 group-hover:text-blue-700 transition-colors duration-300">
+                  <div className="space-y-1 md:space-y-2 mb-3 md:mb-4">
+                    <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-900 group-hover:text-blue-700 transition-colors duration-300">
                       {achievement.title}
                     </div>
-                    <div className="text-sm font-semibold text-blue-600 uppercase tracking-wider">
+                    <div className="text-xs md:text-sm font-semibold text-blue-600 uppercase tracking-wider">
                       {achievement.subtitle}
                     </div>
                   </div>
                   
-                  <div className="text-blue-700 font-medium text-lg group-hover:text-blue-800 transition-colors duration-300">
+                  <div className="text-blue-700 font-medium text-base md:text-lg group-hover:text-blue-800 transition-colors duration-300">
                     {achievement.desc}
                   </div>
                 </div>
 
-                <div className={`absolute bottom-0 left-0 h-2 bg-gradient-to-r ${achievement.color} rounded-b-3xl transform scale-x-0 group-hover:scale-x-100 transition-transform duration-1000 origin-left`} />
+                <div className={`absolute bottom-0 left-0 h-1.5 md:h-2 bg-gradient-to-r ${achievement.color} rounded-b-3xl transform scale-x-0 group-hover:scale-x-100 transition-transform duration-1000 origin-left`} />
               </div>
             </div>
           ))}
         </div>
 
         <div className={`text-center transition-all duration-1200 delay-1000 ${isLoaded && isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 p-12 rounded-3xl text-white overflow-hidden group hover:shadow-2xl hover:shadow-blue-900/30 transition-all duration-700">
+          <div className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 p-8 md:p-12 rounded-3xl text-white overflow-hidden group hover:shadow-2xl hover:shadow-blue-900/30 transition-all duration-700">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-blue-600/20 to-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(6,113,202,0.1)_0%,transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
             
@@ -306,21 +306,21 @@ const About = () => {
             </div>
             
             <div className="relative z-10">
-              <div className="flex items-center justify-center gap-2 mb-6">
-                <Sparkles className="w-6 h-6 text-blue-400 animate-pulse" />
-                <h3 className="text-3xl md:text-4xl font-bold">Ready to Transform Your Business?</h3>
-                <Sparkles className="w-6 h-6 text-blue-300 animate-pulse" style={{ animationDelay: '0.5s' }} />
+              <div className="flex flex-col md:flex-row items-center justify-center gap-2 mb-4 md:mb-6">
+                <Sparkles className="w-5 h-5 md:w-6 md:h-6 text-blue-400 animate-pulse" />
+                <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold">Ready to Transform Your Business?</h3>
+                <Sparkles className="w-5 h-5 md:w-6 md:h-6 text-blue-300 animate-pulse" style={{ animationDelay: '0.5s' }} />
               </div>
               
-              <p className="text-blue-300 text-xl mb-8 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-blue-300 text-base md:text-xl mb-6 md:mb-8 max-w-3xl mx-auto leading-relaxed">
                 Partner with <span className="text-blue-400 font-semibold">QRPE</span> and experience the difference of working with true technology professionals.
               </p>
               
-              <button className="group/btn relative bg-white text-blue-900 px-10 py-4 rounded-2xl font-bold text-lg hover:bg-blue-100 transition-all duration-500 shadow-xl hover:shadow-2xl transform hover:scale-110 hover:-translate-y-1 overflow-hidden">
+              <button className="group/btn relative bg-white text-blue-900 px-8 py-3 md:px-10 md:py-4 rounded-2xl font-bold text-base md:text-lg hover:bg-blue-100 transition-all duration-500 shadow-xl hover:shadow-2xl transform hover:scale-105 hover:-translate-y-1 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-800 opacity-0 group-hover/btn:opacity-10 transition-opacity duration-300 rounded-2xl" />
                 <span className="relative z-10 flex items-center gap-2">
                   Start Your Journey
-                  <Zap className="w-5 h-5 group-hover/btn:text-blue-600 transition-colors duration-300" />
+                  <Zap className="w-4 h-4 md:w-5 md:h-5 group-hover/btn:text-blue-600 transition-colors duration-300" />
                 </span>
               </button>
             </div>
@@ -332,7 +332,7 @@ const About = () => {
         {floatingElements.map((element, index) => (
           <div
             key={index}
-            className={`absolute ${element.size} ${element.color} rounded-full opacity-20 animate-bounce`}
+            className={`absolute ${element.size} ${element.color} rounded-full opacity-20 animate-bounce hidden md:block`}
             style={{
               animationDuration: element.duration,
               animationDelay: element.delay,
@@ -345,8 +345,8 @@ const About = () => {
           />
         ))}
         
-        <div className="absolute top-1/4 left-1/4 w-32 h-32 border border-blue-200/20 rounded-full animate-spin" style={{ animationDuration: '20s' }} />
-        <div className="absolute bottom-1/4 right-1/4 w-24 h-24 border border-blue-200/20 rounded-full animate-spin" style={{ animationDuration: '15s', animationDirection: 'reverse' }} />
+        <div className="absolute top-1/4 left-1/4 w-20 h-20 md:w-32 md:h-32 border border-blue-200/20 rounded-full animate-spin hidden md:block" style={{ animationDuration: '20s' }} />
+        <div className="absolute bottom-1/4 right-1/4 w-16 h-16 md:w-24 md:h-24 border border-blue-200/20 rounded-full animate-spin hidden md:block" style={{ animationDuration: '15s', animationDirection: 'reverse' }} />
       </div>
     </section>
   );

@@ -10,49 +10,49 @@ const Services = () => {
 
   const services = [
     { 
-      icon: <Smartphone className="w-8 h-8" />, 
+      icon: <Smartphone className="w-6 h-6 md:w-8 md:h-8" />, 
       title: "QR Solutions", 
       desc: "Simplify transactions with our advanced QR code technology.", 
       color: "from-amber-600 to-amber-700"
     },
     { 
-      icon: <CreditCard className="w-8 h-8" />, 
+      icon: <CreditCard className="w-6 h-6 md:w-8 md:h-8" />, 
       title: "Payment Solutions", 
       desc: "Seamless and secure payment gateways for all business types.", 
       color: "from-slate-600 to-slate-700"
     },
     { 
-      icon: <BarChart className="w-8 h-8" />, 
+      icon: <BarChart className="w-6 h-6 md:w-8 md:h-8" />, 
       title: "Marketing Services", 
       desc: "Boost your brand with targeted digital marketing strategies.", 
       color: "from-amber-500 to-amber-600"
     },
     { 
-      icon: <UserPlus className="w-8 h-8" />, 
+      icon: <UserPlus className="w-6 h-6 md:w-8 md:h-8" />, 
       title: "On Boarding Services", 
       desc: "Effortless onboarding to get your business up and running quickly.", 
       color: "from-slate-700 to-slate-800"
     },
     { 
-      icon: <Store className="w-8 h-8" />, 
+      icon: <Store className="w-6 h-6 md:w-8 md:h-8" />, 
       title: "Instore Solutions", 
       desc: "Enhance in-store experiences with integrated POS systems.", 
       color: "from-amber-600 to-slate-600"
     },
     { 
-      icon: <MessageSquare className="w-8 h-8" />, 
+      icon: <MessageSquare className="w-6 h-6 md:w-8 md:h-8" />, 
       title: "SMS Solutions", 
       desc: "Engage customers with efficient SMS communication tools.", 
       color: "from-slate-600 to-slate-700"
     },
     { 
-      icon: <MessageSquare className="w-8 h-8" />, 
+      icon: <MessageSquare className="w-6 h-6 md:w-8 md:h-8" />, 
       title: "WhatsApp Business Services", 
       desc: "Leverage WhatsApp for business communication and support.", 
       color: "from-amber-500 to-amber-600"
     },
     { 
-      icon: <Database className="w-8 h-8" />, 
+      icon: <Database className="w-6 h-6 md:w-8 md:h-8" />, 
       title: "ERP Solutions", 
       desc: "Streamline operations with customized ERP integrations.", 
       color: "from-slate-700 to-slate-800"
@@ -86,7 +86,7 @@ const Services = () => {
       ([entry]) => {
         setIsInView(entry.isIntersecting);
       },
-      { threshold: 0.2 }
+      { threshold: 0.1 }
     );
 
     if (sectionRef.current) {
@@ -110,7 +110,7 @@ const Services = () => {
     <section 
       ref={sectionRef}
       id="services" 
-      className="relative py-24 bg-gradient-to-br from-slate-50 via-white to-slate-100 overflow-hidden"
+      className="relative py-16 md:py-24 bg-gradient-to-br from-slate-50 via-white to-slate-100 overflow-hidden"
     >
       <div className="absolute inset-0">
         <div 
@@ -125,18 +125,18 @@ const Services = () => {
             style={{ transform: `translateY(${scrollY * 0.1}px)` }}
           />
         </div>
-        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-amber-200/20 to-slate-200/20 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }} />
-        <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-br from-slate-200/20 to-amber-200/20 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s', animationDelay: '2s' }} />
+        <div className="absolute top-0 left-0 w-64 h-64 md:w-96 md:h-96 bg-gradient-to-br from-amber-200/20 to-slate-200/20 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }} />
+        <div className="absolute bottom-0 right-0 w-56 h-56 md:w-80 md:h-80 bg-gradient-to-br from-slate-200/20 to-amber-200/20 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s', animationDelay: '2s' }} />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className={`text-center mb-20 transition-all duration-1200 ease-out ${isLoaded && isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-600/10 to-slate-600/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6 border border-amber-200/30">
+        <div className={`text-center mb-12 md:mb-20 transition-all duration-1200 ease-out ${isLoaded && isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-600/10 to-slate-600/10 backdrop-blur-sm px-4 py-2 rounded-full mb-4 md:mb-6 border border-amber-200/30">
             <Zap className="w-4 h-4 text-amber-600 animate-pulse" />
             <span className="text-sm font-medium text-slate-700">Our Services</span>
           </div>
           
-          <h2 className="text-4xl md:text-6xl font-light text-slate-900 mb-6 tracking-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-6xl font-light text-slate-900 mb-4 md:mb-6 tracking-tight">
             What We{' '}
             <span className="relative inline-block">
               <span className="font-semibold bg-gradient-to-r from-slate-700 via-slate-600 to-amber-600 bg-clip-text text-transparent animate-pulse">
@@ -146,51 +146,51 @@ const Services = () => {
             </span>
           </h2>
           
-          <p className="text-xl md:text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed font-light">
+          <p className="text-lg md:text-xl lg:text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed font-light">
             Comprehensive solutions to enhance your business operations and customer engagement.
           </p>
         </div>
 
-        <div className={`grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20 transition-all duration-1200 delay-300 ${isLoaded && isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+        <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-12 md:mb-20 transition-all duration-1200 delay-300 ${isLoaded && isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
           {services.map((service, index) => (
             <div 
               key={index}
-              className={`group relative bg-gradient-to-br from-white to-slate-50/50 p-6 rounded-3xl border border-slate-200/50 hover:border-amber-300/50 transition-all duration-700 text-center hover:shadow-2xl hover:shadow-amber-100/30 transform hover:-translate-y-3 hover:scale-105 ${isLoaded && isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              className={`group relative bg-gradient-to-br from-white to-slate-50/50 p-4 md:p-6 rounded-2xl md:rounded-3xl border border-slate-200/50 hover:border-amber-300/50 transition-all duration-700 text-center hover:shadow-xl md:hover:shadow-2xl hover:shadow-amber-100/30 transform hover:-translate-y-2 md:hover:-translate-y-3 hover:scale-[1.03] md:hover:scale-105 ${isLoaded && isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               style={{ transitionDelay: `${400 + index * 100}ms` }}
             >
-              <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-3xl`} />
+              <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-2xl md:rounded-3xl`} />
               
               <div className="relative z-10">
-                <div className={`w-16 h-16 bg-gradient-to-br ${service.color} text-white rounded-2xl flex items-center justify-center text-xl font-bold mx-auto mb-4 shadow-xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>
+                <div className={`w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br ${service.color} text-white rounded-xl md:rounded-2xl flex items-center justify-center mx-auto mb-3 md:mb-4 shadow-lg md:shadow-xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>
                   {service.icon}
                 </div>
-                <h4 className="font-semibold text-slate-900 mb-2 group-hover:text-amber-700 transition-colors duration-300">{service.title}</h4>
-                <p className="text-sm text-slate-600 leading-relaxed group-hover:text-slate-700 transition-colors duration-300">{service.desc}</p>
+                <h4 className="text-base md:text-lg font-semibold text-slate-900 mb-1 md:mb-2 group-hover:text-amber-700 transition-colors duration-300">{service.title}</h4>
+                <p className="text-xs md:text-sm text-slate-600 leading-relaxed group-hover:text-slate-700 transition-colors duration-300">{service.desc}</p>
               </div>
 
-              <div className={`absolute bottom-0 left-0 h-1 bg-gradient-to-r ${service.color} rounded-b-3xl transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left`} />
+              <div className={`absolute bottom-0 left-0 h-1 md:h-1.5 bg-gradient-to-r ${service.color} rounded-b-2xl md:rounded-b-3xl transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left`} />
             </div>
           ))}
         </div>
 
-        <div className={`text-center mb-20 transition-all duration-1200 delay-500 ${isLoaded && isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-          <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Frequently Asked Questions</h3>
-          <div className="max-w-4xl mx-auto space-y-6">
+        <div className={`text-center mb-12 md:mb-20 transition-all duration-1200 delay-500 ${isLoaded && isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+          <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-900 mb-4 md:mb-6">Frequently Asked Questions</h3>
+          <div className="max-w-4xl mx-auto space-y-4 md:space-y-6">
             {faqs.map((faq, index) => (
               <div 
                 key={index}
-                className={`group relative bg-white p-6 rounded-xl border border-slate-200/50 hover:border-amber-300/50 transition-all duration-500 hover:shadow-lg hover:shadow-amber-100/50 ${isLoaded && isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                className={`group relative bg-white p-4 md:p-6 rounded-lg md:rounded-xl border border-slate-200/50 hover:border-amber-300/50 transition-all duration-500 hover:shadow-md md:hover:shadow-lg hover:shadow-amber-100/50 ${isLoaded && isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                 style={{ transitionDelay: `${600 + index * 150}ms` }}
               >
-                <h4 className="text-lg font-semibold text-slate-900 mb-2 group-hover:text-amber-700 transition-colors duration-300">{faq.question}</h4>
-                <p className="text-slate-600 leading-relaxed">{faq.answer}</p>
+                <h4 className="text-base md:text-lg font-semibold text-slate-900 mb-1 md:mb-2 group-hover:text-amber-700 transition-colors duration-300">{faq.question}</h4>
+                <p className="text-sm md:text-base text-slate-600 leading-relaxed">{faq.answer}</p>
               </div>
             ))}
           </div>
         </div>
 
         <div className={`text-center transition-all duration-1200 delay-700 ${isLoaded && isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-12 rounded-3xl text-white overflow-hidden group hover:shadow-2xl hover:shadow-slate-900/30 transition-all duration-700">
+          <div className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-8 md:p-12 rounded-2xl md:rounded-3xl text-white overflow-hidden group hover:shadow-xl md:hover:shadow-2xl hover:shadow-slate-900/30 transition-all duration-700">
             <div className="absolute inset-0 bg-gradient-to-r from-amber-600/20 via-slate-600/20 to-amber-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(245,158,11,0.1)_0%,transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
             
@@ -210,21 +210,21 @@ const Services = () => {
             </div>
             
             <div className="relative z-10">
-              <div className="flex items-center justify-center gap-2 mb-6">
-                <Zap className="w-6 h-6 text-amber-400 animate-pulse" />
-                <h3 className="text-3xl md:text-4xl font-bold">Explore Our Solutions</h3>
-                <Zap className="w-6 h-6 text-amber-300 animate-pulse" style={{ animationDelay: '0.5s' }} />
+              <div className="flex flex-col md:flex-row items-center justify-center gap-2 mb-4 md:mb-6">
+                <Zap className="w-5 h-5 md:w-6 md:h-6 text-amber-400 animate-pulse" />
+                <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold">Explore Our Solutions</h3>
+                <Zap className="w-5 h-5 md:w-6 md:h-6 text-amber-300 animate-pulse" style={{ animationDelay: '0.5s' }} />
               </div>
               
-              <p className="text-slate-300 text-xl mb-8 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-slate-300 text-base md:text-lg lg:text-xl mb-6 md:mb-8 max-w-3xl mx-auto leading-relaxed">
                 Discover how <span className="text-amber-400 font-semibold">QRPE</span> can transform your business operations.
               </p>
               
-              <button className="group/btn relative bg-white text-slate-900 px-10 py-4 rounded-2xl font-bold text-lg hover:bg-slate-100 transition-all duration-500 shadow-xl hover:shadow-2xl transform hover:scale-110 hover:-translate-y-1 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-r from-amber-600 to-slate-600 opacity-0 group-hover/btn:opacity-10 transition-opacity duration-300 rounded-2xl" />
-                <span className="relative z-10 flex items-center gap-2">
+              <button className="group/btn relative bg-white text-slate-900 px-6 py-3 md:px-10 md:py-4 rounded-xl md:rounded-2xl font-bold text-base md:text-lg hover:bg-slate-100 transition-all duration-500 shadow-lg md:shadow-xl hover:shadow-2xl transform hover:scale-105 md:hover:scale-110 hover:-translate-y-1 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-amber-600 to-slate-600 opacity-0 group-hover/btn:opacity-10 transition-opacity duration-300 rounded-xl md:rounded-2xl" />
+                <span className="relative z-10 flex items-center justify-center gap-2">
                   Get Started
-                  <Zap className="w-5 h-5 group-hover/btn:text-amber-600 transition-colors duration-300" />
+                  <Zap className="w-4 h-4 md:w-5 md:h-5 group-hover/btn:text-amber-600 transition-colors duration-300" />
                 </span>
               </button>
             </div>
